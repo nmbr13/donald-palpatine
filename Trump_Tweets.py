@@ -65,7 +65,7 @@ replace_word = {
 
 def trump_tweets(n):
     tweet_log = {}
-    url  = 'https://twitter.com/RealDonad_Trump'
+    url  = 'https://twitter.com/RealDonald_Trump'
     r = requests.api.get(url)
     t = r.text
     soup = BeautifulSoup(t, 'html.parser')
