@@ -61,14 +61,14 @@ replace_word = {
     'White House':'Sith Counsel',
 }
 
-def trump_tweets():
+def trump_tweets(n):
     tweet_log = {}
     url  = 'https://twitter.com/RealDonad_Trump'
     r = requests.api.get(url)
     t = r.text
     soup = BeautifulSoup(t, 'html.parser')
     tweet = soup.find_all('p', attrs={'class':'TweetTextSize TweetTextSize--normal js-tweet-text tweet-text'})
-    test_tweets = [t.text for t in tweet][:10]
+    test_tweets = [t.text for t in tweet][n]
     store_tweets = []
     for item in test_tweets:
         if 'pic' in item:
