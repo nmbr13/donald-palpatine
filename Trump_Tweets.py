@@ -75,7 +75,7 @@ def trump_tweets(n):
             pass
         else:
             store_tweets = store_tweets + [item]
-            
+
     def replace_all(text):
         for i, j in replace_word.items():
             text = text.replace(i, j)
@@ -84,7 +84,7 @@ def trump_tweets(n):
         t1 = replace_all(tweet)
         t2 = tweet
         if t1 == t2:
-            store_tweets.remove(twweet)
+            store_tweets.remove(tweet)
     current_date = datetime.datetime.now()
     tweet_date = f'{current_date.month}-{current_date.day}-{current_date.year}'
     tweet_list = [{'date': tweet_date,'tweet':replace_all(text)} for text in store_tweets]
