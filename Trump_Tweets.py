@@ -68,16 +68,16 @@ replace_word = {
     'White House':'Sith Counsel',
 }
 
-def trump_tweet():
+def trump_tweets():
+    tweet_log = {}
     url  = 'https://twitter.com/RealDonad_Trump'
     r = requests.api.get(url)
     t = r.text
-
     soup = BeautifulSoup(t, 'html.parser')
-    tweet = soup.find('p', attrs={'class':'TweetTextSize TweetTextSize--normal js-tweet-text tweet-text'}).text
-
+    tweet = soup.find_all('p', attrs={'class':'TweetTextSize TweetTextSize--normal js-tweet-text tweet-text'})
+    test_tweets = [t.text for t in tweet][:10]
     def replace_all(text):
         for i, j in replace_word.items():
             text = text.replace(i, j)
         return text
-    return (replace_all(tweet))
+    return [{datetime.datetime.now():replace_all(text)} for text in test_tweets]
