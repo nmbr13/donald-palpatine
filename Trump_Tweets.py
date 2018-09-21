@@ -64,6 +64,8 @@ replace_word = {
     'White House':'Sith Counsel',
     'world':'Galaxy',
     'World' : 'Galaxy',
+    'files':'transmissions',
+    'documents':'transmissions',
 }
 
 def trump_tweets(n):
