@@ -14,9 +14,11 @@ replace_word = {
     'Dems':'Wookiees',
     'Democrates' : 'Wookiees',
     'Democrat':'Wookie',
-    'Democrats':'Storm Troopers',
+    'Democrats':'Droid Armies',
     'REPUBLICANS':'Rebel Scum',
     'Republicans':'Rebel Scum',
+    'Conservatives' : 'Clone Troopers',
+    'conservatives' : 'Stormtroopers',
     'President': 'Galactic Emperor',
     'Donald':'',
     'Trump':'Palpatine',
@@ -63,18 +65,22 @@ replace_word = {
 
 def trump_tweets(n):
     tweet_log = {}
+<<<<<<< HEAD
     url  = 'https://twitter.com/realDonaldTrump'
+=======
+    url  = 'https://twitter.com/RealDonald_Trump'
+>>>>>>> e8db25e2aad08124fef24a71e309be206b3785dc
     r = requests.api.get(url)
     t = r.text
     soup = BeautifulSoup(t, 'html.parser')
     tweet = soup.find_all('p', attrs={'class':'TweetTextSize TweetTextSize--normal js-tweet-text tweet-text'})
     test_tweets = [t.text for t in tweet][:n]
-    store_tweets = []
-    for item in test_tweets:
-        if 'pic' in item:
-            pass
-        else:
-            store_tweets = store_tweets + [item]
+    store_tweets = test_tweets[:]
+#     for item in test_tweets:
+#         if 'pic' in item:
+#             pass
+#         else:
+#             store_tweets = store_tweets + [item]
 
     def replace_all(text):
         for i, j in replace_word.items():
