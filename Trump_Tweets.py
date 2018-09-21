@@ -26,6 +26,8 @@ replace_word = {
     'Congress' : 'The Galactic Senate',
     'Army':'Clones',
     'army':'Clones',
+    'Armed Forces':'Clone Army',
+    'armed forces':'Clone Army',
     'Marine':'Clone Trooper',
     'Vietnam':'the Battle of Gionosis',
     'Military':'Clone Army',
