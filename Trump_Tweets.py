@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import time
 
+
 replace_word = {
     'Border':'Rebel Base',
     'border':'Rebel Base',
