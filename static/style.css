@@ -3,4 +3,5 @@ body{
 }
 .card{
   background-color: white;
+  margin: 10px auto;
 }
