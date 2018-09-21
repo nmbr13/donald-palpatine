@@ -61,6 +61,8 @@ replace_word = {
     'FAKE NEWS':'Rebel Propoganda',
     'Fake News':'Rebel Propoganda',
     'White House':'Sith Counsel',
+    'world':'Galaxy',
+    'World' : 'Galaxy',
 }
 
 def trump_tweets(n):
