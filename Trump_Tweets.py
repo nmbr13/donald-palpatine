@@ -1,14 +1,5 @@
-
-# coding: utf-8
-
-# In[1]:
-
-
-# import numpy as np
-import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-from collections import Counter
 import time
 
 replace_word = {
