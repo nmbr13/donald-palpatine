@@ -79,7 +79,7 @@ def trump_tweets(n):
     def replace_all(text):
         for i, j in replace_word.items():
             text = text.replace(i, j)
-            return text
+        return text
     for tweet in store_tweets:
         t1 = replace_all(tweet)
         t2 = tweet
