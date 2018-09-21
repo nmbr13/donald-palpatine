@@ -12,6 +12,7 @@ replace_word = {
     'Putin': 'Grand Moff Putin',
     'Obama':'Mace Windu',
     'Dems':'Wookiees',
+    'left':'Wookies',
     'Leftists':'Wookies',
     'Democrates' : 'Wookiees',
     'Democrat':'Wookiee',
