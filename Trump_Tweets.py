@@ -12,12 +12,14 @@ replace_word = {
     'Putin': 'Grand Moff Putin',
     'Obama':'Mace Windu',
     'Dems':'Wookiees',
+    'Leftists':'Wookies',
     'Democrates' : 'Wookiees',
     'Democrat':'Wookiee',
     'REPUBLICANS':'Rebel Scum',
     'Republicans':'Rebel Scum',
     'Conservatives' : 'Clone Troopers',
     'conservatives' : 'Stormtroopers',
+    'Right Wing':'Stormtroopers',
     'President': 'Galactic Emperor',
     'Donald':'',
     'Trump':'Palpatine',
@@ -66,6 +68,8 @@ replace_word = {
     'World' : 'Galaxy',
     'files':'transmissions',
     'documents':'transmissions',
+    'radical':'rogue',
+    'Radical':'Rogue',
 }
 
 def trump_tweets(n):
