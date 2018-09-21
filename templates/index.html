@@ -4,13 +4,15 @@
 <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
+  <h1>Emperor Trump</h1>
+  <h2>Reimagined Tweets from the leader of the galaxy</h2>
   <div class="container">
     <div class="row">
       {% for q in quote%}
       <div class="card col-md-12">
         <div class="quote">
+            <h3>{{q.tweet}}</h3>
             <i>{{q.date}}</i>
-            <p>{{q.tweet}}</p>
         </div>
       </div>
     {%endfor%}
