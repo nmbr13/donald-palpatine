@@ -6,12 +6,14 @@
 <body>
   <div class="container">
     <div class="row">
-
+      {% for q in quotes%}
       <div class="card col-md-12">
         <div class="quote">
-            <h2>{{quote}}</h2>
+            <i>{{q.date}}</i>
+            <p>{{q.tweet}}</p>
         </div>
       </div>
+    {{%endfor%}}
     </div>
   </div>
 </body>

@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 import Trump_Tweets as tt
 
-quote = tt.trump_tweet()
+quote = tt.trump_tweets()
 
 @app.route("/")
 def hello():

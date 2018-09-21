@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import datetime
 import time
-    
+
 
 replace_word = {
     'Border':'Rebel Base',
@@ -69,8 +69,19 @@ def trump_tweets():
     soup = BeautifulSoup(t, 'html.parser')
     tweet = soup.find_all('p', attrs={'class':'TweetTextSize TweetTextSize--normal js-tweet-text tweet-text'})
     test_tweets = [t.text for t in tweet][:10]
+    store_tweets = []
+    for item in test_tweets:
+        if 'pic' in item:
+            pass
+        else:
+            store_tweets = store_tweets + [item]
     def replace_all(text):
         for i, j in replace_word.items():
             text = text.replace(i, j)
-        return text
-    return [{datetime.datetime.now():replace_all(text)} for text in test_tweets]
+            return text
+    current_date = datetime.datetime.now()
+    tweet_date = f'{current_date.month}-{current_date.day}-{current_date.year}'
+    tweet_list = [{'date': tweet_date,'tweet':replace_all(text)} for text in store_tweets]
+    return tweet_list
+
+# Variable : ""
