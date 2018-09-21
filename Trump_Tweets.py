@@ -68,7 +68,7 @@ def trump_tweets(n):
     t = r.text
     soup = BeautifulSoup(t, 'html.parser')
     tweet = soup.find_all('p', attrs={'class':'TweetTextSize TweetTextSize--normal js-tweet-text tweet-text'})
-    test_tweets = [t.text for t in tweet][n]
+    test_tweets = [t.text for t in tweet][:n]
     store_tweets = []
     for item in test_tweets:
         if 'pic' in item:
